@@ -17,6 +17,7 @@ namespace ConsoleAppQueue
             queueStorage.CreateMessage("Hi there").Wait();
             queueStorage.PeekMessage().Wait(); ;
             queueStorage.DeleteMessage().Wait();
+            queueStorage.DeleteQueue().Wait();
         }
 
         static void MainSetupIConf()

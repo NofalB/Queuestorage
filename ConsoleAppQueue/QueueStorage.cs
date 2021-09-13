@@ -63,6 +63,18 @@ namespace ConsoleAppQueue
             }
         }
 
+        public async Task DeleteQueue()
+        {
+            try
+            {
+                await queue.DeleteAsync();
+            }
+            catch (StorageException ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+        }
+
         public async Task<string> PeekMessage()
         {
             try
